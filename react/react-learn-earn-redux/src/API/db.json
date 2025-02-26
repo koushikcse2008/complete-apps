@@ -1,0 +1,583 @@
+{
+  "home": [
+    {
+      "aboutus": [
+        {
+          "id": 1,
+          "heading": "Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.",
+          "content": "<p class='fst-italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><ul><li><i class='bx bx-check-double'></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li><li><i class='bx bx-check-double'></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>   <li><i class='bx bx-check-double'></i> Voluptate repellendus pariatur reprehenderit corporis sint.</li><li><i class='bx bx-check-double'></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li></ul><p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>",
+          "image_src": "assets/img/about.jpg"
+        },
+        {
+          "id": 2,
+          "heading": "Call To Action",
+          "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "image_src": "",
+          "button_label": "Call to action",
+          "button_url": "!#"
+        },
+        {
+          "id": 3,
+          "heading": "Our Services",
+          "content": "",
+          "image_src": ""
+        }
+      ],
+      "services": [
+        {
+          "id": 1,
+          "name": "Lorem Ipsum",
+          "content": "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
+          "icon": "bi bi-briefcase",
+          "color": "#ff689b"
+        },
+        {
+          "id": 2,
+          "name": "Dolor Sitema",
+          "content": "Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata",
+          "icon": "bi bi-book",
+          "color": "#e9bf06"
+        },
+        {
+          "id": 3,
+          "name": "Sed ut perspiciatis",
+          "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+          "icon": "bi bi-card-checklist",
+          "color": "#3fcdc7"
+        },
+        {
+          "id": 4,
+          "name": "Magni Dolores",
+          "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+          "icon": "bi bi-binoculars",
+          "color": "#41cf2e"
+        },
+        {
+          "id": 5,
+          "name": "Nemo Enim",
+          "content": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque",
+          "icon": "bi bi-globe",
+          "color": "#d6ff22"
+        },
+        {
+          "id": 6,
+          "name": "Eiusmod Tempor",
+          "content": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi",
+          "icon": "bi bi-clock",
+          "color": "#4680ff"
+        }
+      ]
+    }
+  ],
+  "about-us": [
+    {
+      "sections": [
+        {
+          "id": 1,
+          "heading": "Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.",
+          "content": "<p class='fst-italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><ul><li><i class='bx bx-check-double'></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li><li><i class='bx bx-check-double'></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>   <li><i class='bx bx-check-double'></i> Voluptate repellendus pariatur reprehenderit corporis sint.</li><li><i class='bx bx-check-double'></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li></ul><p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>",
+          "image_src": "assets/img/about.jpg"
+        },
+        {
+          "id": 2,
+          "heading": "Work Process",
+          "content": "Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.",
+          "image_src": ""
+        },
+        {
+          "id": 3,
+          "heading": "Our Skills",
+          "content": "Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.",
+          "image_src": ""
+        },
+        {
+          "id": 4,
+          "heading": "Testimonials",
+          "content": "What are they saying about us",
+          "image_src": ""
+        },
+        {
+          "id": 5,
+          "heading": "Our Clients",
+          "content": "Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.",
+          "image_src": ""
+        }
+      ]
+    },
+    {
+      "testimonials": [
+        {
+          "id": 1,
+          "name": "Saul Goodman",
+          "designation": "Ceo &amp; Founder",
+          "content": "Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.",
+          "star": 5,
+          "image_src": "assets/img/testimonials/testimonials-1.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Sara Wilsson",
+          "designation": "Designer",
+          "content": "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
+          "star": 5,
+          "image_src": "assets/img/testimonials/testimonials-2.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Jena Karlis",
+          "designation": "Store Owner",
+          "content": "Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.",
+          "star": 5,
+          "image_src": "assets/img/testimonials/testimonials-3.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Matt Brandon",
+          "designation": "Freelancer",
+          "content": "Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.",
+          "star": 5,
+          "image_src": "assets/img/testimonials/testimonials-4.jpg"
+        },
+        {
+          "id": 5,
+          "name": "John Larson",
+          "designation": "Entrepreneur",
+          "content": "Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
+          "star": 5,
+          "image_src": "assets/img/testimonials/testimonials-5.jpg"
+        }
+      ]
+    },
+    {
+      "clients": [
+        {
+          "id": 1,
+          "name": "Client 1",
+          "image_src": "assets/img/clients/client-1.png"
+        },
+        {
+          "id": 2,
+          "name": "Client 2",
+          "image_src": "assets/img/clients/client-2.png"
+        },
+        {
+          "id": 3,
+          "name": "Client 3",
+          "image_src": "assets/img/clients/client-3.png"
+        },
+        {
+          "id": 4,
+          "name": "Client 4",
+          "image_src": "assets/img/clients/client-4.png"
+        },
+        {
+          "id": 5,
+          "name": "Client 5",
+          "image_src": "assets/img/clients/client-5.png"
+        },
+        {
+          "id": 6,
+          "name": "Client 6",
+          "image_src": "assets/img/clients/client-6.png"
+        },
+        {
+          "id": 7,
+          "name": "Client 7",
+          "image_src": "assets/img/clients/client-7.png"
+        },
+        {
+          "id": 7,
+          "name": "Client 8",
+          "image_src": "assets/img/clients/client-8.png"
+        }
+      ]
+    },
+    {
+      "works": [
+        {
+          "id": 1,
+          "heading": "Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.",
+          "content": "<p class='fst-italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><ul><li><i class='bi bi-check'></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li><li><i class='bi bi-check'></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li></ul>",
+          "image_src": "assets/img/work-process-1.png"
+        },
+        {
+          "id": 2,
+          "heading": "Corporis temporibus maiores provident",
+          "content": "<p class='fst-italic'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>",
+          "image_src": "assets/img/work-process-2.png"
+        },
+        {
+          "id": 3,
+          "heading": "Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas",
+          "content": "<p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p><ul><li><i class='bi bi-check'></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li><li><i class='bi bi-check'></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li><li><i class='bi bi-check'></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li></ul>",
+          "image_src": "assets/img/work-process-3.png"
+        },
+        {
+          "id": 4,
+          "heading": "Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in",
+          "content": "<p class='fst-italic'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><p> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
+          "image_src": "assets/img/work-process-4.png"
+        }
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "id": 1,
+      "name": "Walter White",
+      "designation": "Chief Executive Officer",
+      "content": "Animi est delectus alias quam repellendus nihil nobis dolor. Est sapiente occaecati et dolore. Omnis aut ut nesciunt explicabo qui. Eius nam deleniti ut omnis repudiandae perferendis qui. Neque non quidem sit sed pariatur quia modi ea occaecati. Incidunt ea non est corporis in.",
+      "image_src": "assets/img/team/team-1.jpg",
+      "facebook": "https://www.facebook.com",
+      "twitter": "https://twitter.com",
+      "instagram": "https://www.instagram.com",
+      "linkedin": "https://www.linkedin.com"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Jhonson",
+      "designation": "Product Manager",
+      "content": "Aspernatur iste esse aliquam enim et corporis. Molestiae voluptatem aut eligendi quis aut. Libero vel amet voluptatem eos rerum non doloremque. Dolores eum non.",
+      "image_src": "assets/img/team/team-2.jpg",
+      "facebook": "https://www.facebook.com",
+      "twitter": "https://twitter.com",
+      "instagram": "https://www.instagram.com",
+      "linkedin": "https://www.linkedin.com"
+    },
+    {
+      "id": 3,
+      "name": "William Anderson",
+      "designation": "CTO",
+      "content": "Ut enim possimus nihil cupiditate beatae. Veniam facere quae non qui necessitatibus rerum eos vero. Maxime sit sunt quo dolor autem est qui quaerat aliquid. Tenetur possimus qui enim.",
+      "image_src": "assets/img/team/team-3.jpg",
+      "facebook": "https://www.facebook.com",
+      "twitter": "https://twitter.com",
+      "instagram": "https://www.instagram.com",
+      "linkedin": "https://www.linkedin.com"
+    },
+    {
+      "id": 4,
+      "name": "Amanda Jepson",
+      "designation": "Accountant",
+      "content": "Sint qui cupiditate. Asperiores fugit impedit aspernatur et mollitia. Molestiae qui placeat labore assumenda id qui nesciunt quo reprehenderit. Rem dolores similique quis soluta culpa enim quia ratione ea.",
+      "image_src": "assets/img/team/team-4.jpg",
+      "facebook": "https://www.facebook.com",
+      "twitter": "https://twitter.com",
+      "instagram": "https://www.instagram.com",
+      "linkedin": "https://www.linkedin.com"
+    },
+    {
+      "id": 5,
+      "name": "Niall Katz",
+      "designation": "Marketing",
+      "content": "Aut ex esse explicabo quia harum ea accusamus excepturi. Temporibus at quia quisquam veritatis impedit. Porro laborum voluptatum sed necessitatibus a saepe. Deserunt laborum quasi consequatur voluptatum iusto sint qui fuga vel. Enim eveniet sed quibusdam rerum in. Non dicta architecto consequatur quo praesentium nesciunt.",
+      "image_src": "assets/img/team/team-5.jpg",
+      "facebook": "https://www.facebook.com",
+      "twitter": "https://twitter.com",
+      "instagram": "https://www.instagram.com",
+      "linkedin": "https://www.linkedin.com"
+    },
+    {
+      "id": 6,
+      "name": "Demi Lewis",
+      "designation": "Financing",
+      "content": "Amet labore numquam corrupti est. Nostrum amet voluptas consectetur dolor voluptatem architecto distinctio consequuntur eligendi. Quam impedit enim aut nesciunt aut dicta quam exercitationem. Reprehenderit exercitationem magnam. Ullam similique ut voluptas totam nobis porro accusamus nulla omnis.",
+      "image_src": "assets/img/team/team-6.jpg",
+      "facebook": "https://www.facebook.com",
+      "twitter": "https://twitter.com",
+      "instagram": "https://www.instagram.com",
+      "linkedin": "https://www.linkedin.com"
+    }
+  ],
+  "services": [
+    {
+      "services": [
+        {
+          "id": 1,
+          "name": "Lorem Ipsum",
+          "content": "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
+          "icon": "bi bi-briefcase",
+          "color": "#ff689b"
+        },
+        {
+          "id": 2,
+          "name": "Dolor Sitema",
+          "content": "Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata",
+          "icon": "bi bi-book",
+          "color": "#e9bf06"
+        },
+        {
+          "id": 3,
+          "name": "Sed ut perspiciatis",
+          "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+          "icon": "bi bi-card-checklist",
+          "color": "#3fcdc7"
+        },
+        {
+          "id": 4,
+          "name": "Magni Dolores",
+          "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+          "icon": "bi bi-binoculars",
+          "color": "#41cf2e"
+        },
+        {
+          "id": 5,
+          "name": "Nemo Enim",
+          "content": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque",
+          "icon": "bi bi-globe",
+          "color": "#d6ff22"
+        },
+        {
+          "id": 6,
+          "name": "Eiusmod Tempor",
+          "content": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi",
+          "icon": "bi bi-clock",
+          "color": "#4680ff"
+        }
+      ],
+      "features": [
+        {
+          "id": 1,
+          "name": "Our Mission",
+          "content": "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.",
+          "image_src": "url(assets/img/features-1.jpg)"
+        },
+        {
+          "id": 2,
+          "name": "Our Plan",
+          "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem.",
+          "image_src": "url(assets/img/features-2.jpg)"
+        },
+        {
+          "id": 3,
+          "name": "Our Vision",
+          "content": "Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores.",
+          "image_src": "url(assets/img/features-3.jpg)"
+        },
+        {
+          "id": 4,
+          "name": "Our Care",
+          "content": "Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium voluptatem.",
+          "image_src": "url(assets/img/features-4.jpg)"
+        }
+      ]
+    }
+  ],
+  "pricing": [
+    {
+      "price": [
+        {
+          "id": 1,
+          "name": "Free",
+          "price": 0,
+          "details": "<ul><li>Aida dere</li><li>Nec feugiat nisl</li><li>Nulla at volutpat dola</li><li class='na'>Pharetra massa</li><li class='na'>Massa ultricies mi</li></ul>",
+          "btn_label": "Buy Now",
+          "btn_link": "!#"
+        },
+        {
+          "id": 2,
+          "name": "Business",
+          "price": 19,
+          "details": "<ul><li>Aida dere</li><li>Nec feugiat nisl</li><li>Nulla at volutpat dola</li><li>Pharetra massa</li><li className='na'>Massa ultricies mi</li></ul>",
+          "btn_label": "Buy Now",
+          "btn_link": "!#"
+        },
+        {
+          "id": 3,
+          "name": "Developer",
+          "price": 29,
+          "details": "<ul><li>Aida dere</li><li>Nec feugiat nisl</li><li>Nulla at volutpat dola</li><li>Pharetra massa</li><li>Massa ultricies mi</li></ul>",
+          "btn_label": "Buy Now",
+          "btn_link": "!#"
+        },
+        {
+          "id": 4,
+          "name": "Ultimate",
+          "price": 49,
+          "details": "<ul><li>Aida dere</li><li>Nec feugiat nisl</li><li>Nulla at volutpat dola</li><li>Pharetra massa</li><li>Massa ultricies mi</li></ul>",
+          "btn_label": "Buy Now",
+          "btn_link": "!#"
+        }
+      ],
+      "faq": [
+        {
+          "id": 1,
+          "name": "Non consectetur a erat nam at lectus urna duis?",
+          "content": "Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non."
+        },
+        {
+          "id": 2,
+          "name": "Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?",
+          "content": "Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim."
+        },
+        {
+          "id": 3,
+          "name": "Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?",
+          "content": "Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus."
+        },
+        {
+          "id": 4,
+          "name": "Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?",
+          "content": "Aperiam itaque sit optio et deleniti eos nihil quidem cumque. Voluptas dolorum accusantium sunt sit enim. Provident consequuntur quam aut reiciendis qui rerum dolorem sit odio. Repellat assumenda soluta sunt pariatur error doloribus fuga."
+        },
+        {
+          "id": 5,
+          "name": "Tempus quam pellentesque nec nam aliquam sem et tortor consequat?",
+          "content": "Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in"
+        }
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "user_name": "Name 1",
+      "user_email": "name1@gmail.com",
+      "user_subject": "Test name 1",
+      "user_message": "Submitted",
+      "added_on": "2022-12-01"
+    },
+    {
+      "id": 2,
+      "user_name": "gsdf",
+      "user_email": "dgsd",
+      "user_subject": "fsd",
+      "user_message": "gsdfsdf",
+      "added_on": "Thu Dec 01 2022 23:57:41 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": 73,
+      "user_name": "fgjh",
+      "user_email": "fgj",
+      "user_subject": "fghfg",
+      "user_message": "jfghfgh",
+      "added_on": "2022-12-01"
+    },
+    {
+      "id": 88,
+      "user_name": "test",
+      "user_email": "test@email.com",
+      "user_subject": "test subject",
+      "user_message": "test message",
+      "added_on": "2022-12-24"
+    },
+    {
+      "id": 89
+    },
+    {
+      "id": 40,
+      "user_name": "fgdfwertwer",
+      "user_email": "fdvsdfsdxcsdf",
+      "user_subject": "sdgsdfsdfsd",
+      "user_message": "gsdfasdasdasfasd",
+      "added_on": "2022-12-25"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "name": "Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia",
+      "content": "Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta. Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.",
+      "author": "John Doe",
+      "publish_date": "2022-12-01",
+      "comment": 6,
+      "category": "General",
+      "posts": 10,
+      "image_src": "/assets/img/blog/blog-1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Nisi magni odit consequatur autem nulla dolorem",
+      "content": "Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum voluptatum et. Quo libero rerum voluptatem pariatur nam. <br /> Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et sint quos sed voluptas. Maxime sed tempore enim omnis non alias odio quos distinctio.",
+      "author": "John Doe",
+      "publish_date": "2022-12-01",
+      "comment": 8,
+      "category": "Lifestyle",
+      "posts": 20,
+      "image_src": "/assets/img/blog/blog-2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.",
+      "content": "Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis. <br />Doloremque est saepe laborum aut. Ipsa cupiditate ex harum at recusandae nesciunt. Ut dolores velit.",
+      "author": "John Doe",
+      "publish_date": "2022-12-02",
+      "comment": 10,
+      "category": "Travel",
+      "posts": 30,
+      "image_src": "/assets/img/blog/blog-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.",
+      "content": "Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui. <br /> Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.",
+      "author": "John Doe",
+      "publish_date": "2022-12-02",
+      "comment": 12,
+      "category": "Design",
+      "posts": 40,
+      "image_src": "/assets/img/blog/blog-4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.",
+      "content": "Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui. <br /> Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.",
+      "author": "John Doe",
+      "publish_date": "2022-12-04",
+      "comment": 12,
+      "category": "Creative",
+      "posts": 50,
+      "image_src": "/assets/img/blog/blog-2.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.",
+      "content": "Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui. <br /> Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.",
+      "author": "John Doe",
+      "publish_date": "2022-12-06",
+      "comment": 16,
+      "category": "Education",
+      "posts": 60,
+      "image_src": "/assets/img/blog/blog-1.jpg"
+    }
+  ],
+  "footer": {
+    "footer_text": "Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.",
+    "address": "A108 Adam Street <br /> New York, NY 535022 <br /> United States ",
+    "phone": "+1 5589 55488 55",
+    "email": "info@example.com",
+    "news_text": "Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.",
+    "twitter": "https://twitter.com",
+    "facebook": "https://www.facebook.com",
+    "instagram": "https://www.instagram.com",
+    "linkedin": "https://www.linkedin.com"
+  },
+  "newsletter": [
+    {
+      "id": 1,
+      "email": "info@example.com",
+      "added_on": "2022-12-07"
+    },
+    {
+      "id": 19,
+      "email": "asdasd",
+      "added_on": "2022-12-07"
+    },
+    {
+      "id": 60,
+      "email": "sdsdsd@email.com",
+      "added_on": "2022-12-07"
+    },
+    {
+      "id": 23,
+      "email": "test@email.com",
+      "added_on": "2022-12-07"
+    }
+  ],
+  "terms-conditions": {
+    "content": " Praesent ullamcorper odio dictum augue egestas sollicitudin. Quisque nec dapibus nulla. Phasellus pretium vitae nisl in vestibulum. In luctus venenatis nisl, et facilisis est ultricies ut. Nam leo nunc, suscipit a odio sed, mattis convallis risus. Mauris in lectus quis augue facilisis consectetur ac eu orci. Curabitur magna erat, luctus eu erat a, ullamcorper tincidunt dolor. Maecenas et tincidunt ante, vel gravida ligula. <br /><br />Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In et mauris id ante aliquam aliquam quis ut orci. Suspendisse ante velit, ullamcorper sagittis semper ut, bibendum non justo. Duis eu dolor fermentum, tincidunt elit aliquam, malesuada augue. Etiam a est mollis, semper diam at, tempus erat. Maecenas quis porttitor nisi. Nulla pellentesque lorem augue, eget lobortis ex tincidunt maximus.<br /><br /> Morbi eu urna consequat, mattis elit consectetur, iaculis augue. Nunc eu convallis velit, non placerat lacus. Aliquam dolor urna, auctor elementum imperdiet quis, egestas et magna. Mauris rutrum dui eu leo tincidunt vulputate. Sed mattis lorem vitae nulla commodo, ac ultricies dolor laoreet. Morbi lacinia eros ut leo fringilla, eget porta massa luctus. Etiam vitae gravida lectus. Vestibulum condimentum urna in est ornare, sit amet ullamcorper augue pulvinar. Nam purus est, venenatis pharetra volutpat id, gravida eu lectus. Nulla varius rhoncus ex porttitor feugiat. Aliquam facilisis euismod egestas. Pellentesque rutrum risus non lacus facilisis cursus. Mauris commodo elit vel iaculis ullamcorper."
+  },
+  "privacy-policy": {
+    "content": " In tincidunt placerat tortor. Nulla facilisi. Cras pretium volutpat ex vel laoreet. Duis id tellus sit amet dui commodo laoreet non elementum ipsum. Cras sodales scelerisque bibendum. Praesent a ultrices nunc. In ac scelerisque sem. Sed suscipit porta dapibus. Aliquam tincidunt fermentum orci, ut venenatis sem congue id. Integer vitae semper tellus, quis laoreet enim. Sed accumsan mattis sem non blandit. Quisque eget fermentum urna, et tincidunt sapien. <br /><br />Cras et lorem nibh. Nullam efficitur nec ante ut commodo. Cras non libero mauris. Sed non pellentesque magna, at dictum neque. Sed id pretium augue. Nullam maximus accumsan est, eget rhoncus neque tempus ut. In vel dui pulvinar, dictum leo quis, faucibus arcu. Suspendisse eget turpis ut est cursus ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent eu purus elementum, posuere justo ut, viverra ipsum. Nulla bibendum erat eget eros imperdiet consequat. Proin convallis lacinia augue, ut tempus enim dapibus at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque maximus purus quis turpis interdum, ac sagittis tortor malesuada. Duis a pharetra nibh, ac ullamcorper risus. <br /><br />    Mauris auctor semper fringilla. Curabitur eget luctus lorem. Nulla sodales massa sit amet leo vestibulum semper ac venenatis erat. Proin nunc enim, lobortis at ullamcorper nec, ornare vitae ante. Pellentesque ex lacus, semper euismod elit quis, maximus tincidunt tortor. Phasellus egestas lectus nisi, sed accumsan turpis placerat sit amet. Maecenas pharetra non ex semper ullamcorper. Ut ac nibh tincidunt, interdum urna in, mollis mauris. Etiam tincidunt et mauris blandit pharetra. Nullam efficitur arcu at finibus tristique. Mauris gravida ornare vehicula. Sed convallis ultrices euismod. Mauris posuere quam placerat turpis consectetur consectetur. Vestibulum in enim malesuada, lobortis arcu sit amet, faucibus urna. Phasellus nisl est, malesuada eget libero in, gravida lacinia mi. "
+  }
+}
