@@ -1,0 +1,41 @@
+ul.custom-sidebar {
+	border-radius: 10px !important;
+}
+
+ul.custom-sidebar li {
+	background-color: green;
+	
+}
+
+ul.custom-sidebar li a {
+	color:  #fff!important;
+	text-decoration: none;
+    cursor: pointer;
+}
+
+ul.custom-sidebar li a.active {
+	font-weight: bold;
+	border-bottom: 2px solid #fff;
+}
+
+.action-link { 
+	text-decoration: none;
+	color: red;
+	font-weight: bold;
+}
+
+.add-data {
+	float: right;
+    margin-top: -42px !important;
+    border: 2px solid red;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+	font-weight: bold;
+}
+
+.border {
+	border-radius: 10px !important;
+}
