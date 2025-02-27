@@ -23,6 +23,12 @@ const contact = new Schema({
     message: {
         type: String,
         required: true
+    },
+    ct_status: {
+        type: String,
+        enum: ['active', 'inactive'],
+        default: 'active',
+        required: true
     }
 }, {
     timestamps: true

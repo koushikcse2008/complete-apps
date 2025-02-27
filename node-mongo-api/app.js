@@ -12,6 +12,9 @@ const orderRouter = require('./orders/order.controller');
 const orderDetailsRouter = require('./order-details/order-detail.controller');
 const productRouter = require('./products/product.controller');
 const productEnquiryRouter = require('./product-enquiries/product-enquiry.controller');
+const faqRouter = require('./faqs/faq.controller');
+const serviceRouter = require('./services/service.controller');
+const aboutRouter = require('./about/about.controller');
 
 const app = express();
 
@@ -35,6 +38,9 @@ app.use('/order', orderRouter);
 app.use('/order-details', orderDetailsRouter);
 app.use('/product', productRouter);
 app.use('/product-enquiry', productEnquiryRouter);
+app.use('/faq', faqRouter);
+app.use('/service', serviceRouter);
+app.use('/about', aboutRouter);
 
 app.listen(process.env.SERVER_PORT, () => {
     console.log('Server is running in 4000 port');

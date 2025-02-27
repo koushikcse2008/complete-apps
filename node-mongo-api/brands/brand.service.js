@@ -18,12 +18,13 @@ const editBrand = async (editId) => {
 
 const updateBrand = async (updateId, updateBrand) => {
     try {
-        Brand.findByIdAndUpdate(
+
+        return await Brand.findByIdAndUpdate(
             { _id: updateId },
             { $set: { brand_name: updateBrand.brand_name, brand_desc: updateBrand.brand_desc, brand_status: updateBrand.brand_status }},
             { new: false, runValidators: true } 
         );
-        return await Brand.find();
+        //return await Brand.find();
     } catch (error) {
         throw error;
     }
@@ -33,6 +34,14 @@ const updateBrand = async (updateId, updateBrand) => {
 const listBrand = async () => {
     try {
         return await Brand.find();
+    } catch(error) {
+        throw error;
+    }
+}
+
+const listBrandPagination = async (page, limit) => {
+    try {
+        return await Brand.find().skip((page - 1) * limit).limit(limit);
     } catch(error) {
         throw error;
     }
@@ -55,5 +64,6 @@ module.exports = {
     editBrand,
     updateBrand,
     listBrand,
-    deleteBrand
+    listBrandPagination,
+    deleteBrand,
 }

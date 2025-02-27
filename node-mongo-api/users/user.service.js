@@ -16,21 +16,21 @@ const editUser = async (userId) => {
     }
 }
 
-const updateUser = async (updateUser) => {
+const updateUser = async (updateId, updateUser) => {
     try {
         return await User.findByIdAndUpdate(
             { _id: updateUser._id },
             { 
                 user_type: updateUser.user_type, 
                 user_name: updateUser.user_name, 
-                user_email: updateUser.user_email, 
-                user_password: updateUser.user_password, 
-                user_phone: updateUser.user_phone, 
-                user_addr: updateUser.user_addr, 
-                user_country: updateUser.user_country, 
-                user_state: updateUser.user_state, 
-                user_city: updateUser.user_city, 
-                user_zipcode: updateUser.user_zipcode, 
+                email: updateUser.email, 
+                password: updateUser.password, 
+                phone: updateUser.phone, 
+                addr: updateUser.addr, 
+                country: updateUser.country, 
+                state: updateUser.state, 
+                city: updateUser.city, 
+                zipcode: updateUser.zipcode, 
             },
             { new: false }
         );
@@ -42,6 +42,14 @@ const updateUser = async (updateUser) => {
 const listUser = async () => {
     try {
         return await User.find();
+    } catch(error) {
+        throw error;
+    }
+}
+
+const listUserPagination = async (page, limit) => {
+    try {
+        return await User.find().skip((page - 1) * limit).limit(limit);
     } catch(error) {
         throw error;
     }
@@ -121,6 +129,7 @@ module.exports = {
     editUser,
     updateUser,
     listUser,
+    listUserPagination,
     deleteUser,
     registerUser,
     loginUser

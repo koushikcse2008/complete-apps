@@ -39,6 +39,12 @@ const Users = new Schema(
         },
         zipcode: {
             type: String
+        },
+        status: {
+            type: String,
+            enum: ['active', 'inactive'],
+            default: 'active',
+            required: true
         }
     },
     { timestamps: true }

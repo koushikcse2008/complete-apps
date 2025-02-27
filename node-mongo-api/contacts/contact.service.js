@@ -23,22 +23,31 @@ const createContact = async (newContact) => {
       }
 }
 
-const updateContact = async (updateContact) => {
-  console.log(updateContact.fname);
+const editContact = async (editId) => {
+    try {
+        return await Contact.findById(editId);
+    } catch(error) {
+        throw error;
+    }
+}
+
+const updateContact = async (updateId, updateContact) => {
   try {
-    await Contact.findOneAndUpdate(
-      {
-        email: updateContact.email,
-      },
-      {
-        fname: updateContact.fname,
-        lname: updateContact.lname,
-      },
-      {
-        new: true,
-      }
+    return await Contact.findByIdAndUpdate(
+        { _id: updateId },
+        { 
+          $set: { 
+            fname: updateContact.fname, 
+            lname: updateContact.lname, 
+            phone: updateContact.phone, 
+            email: updateContact.email, 
+            subject: updateContact.subject, 
+            message: updateContact.message, 
+            ct_status: updateContact.ct_status 
+          }
+        },
+        { new: false, runValidators: true } 
     );
-    return await Contact.find();
   } catch (error) {
     throw error;
   }
@@ -52,6 +61,14 @@ const listContact = async () => {
   }
 }
 
+const listContactPagination = async (page, limit) => {
+    try {
+        return await Contact.find().skip((page - 1) * limit).limit(limit);
+    } catch(error) {
+        throw error;
+    }
+}
+
 const deleteContact = async(delId) => {
   try{
    return await Contact.findByIdAndDelete(delId);
@@ -63,7 +80,9 @@ const deleteContact = async(delId) => {
 
 module.exports = {
     createContact,
+    editContact,
     updateContact,
     listContact,
+    listContactPagination,
     deleteContact
 }

@@ -1,6 +1,7 @@
 const express = require('express');
 const Router = express.Router();
 const UserHelper = require('./user.service');
+const User = require('./user.model');
 
 const createUser = async (req, res, next) => {
     try {
@@ -17,7 +18,7 @@ const createUser = async (req, res, next) => {
 
 const editUser = async (req, res, next) => {
     try {
-        const data = await UserHelper.editUser(req.body);
+        const data = await UserHelper.editUser(req.params.id);
         const return_data = {
             status: 200,
             message: "Successfully fetched.",
@@ -31,7 +32,7 @@ const editUser = async (req, res, next) => {
 
 const updateUser = async (req, res, next) => {
     try {
-        const data = await UserHelper.updateUser(req.body);
+        const data = await UserHelper.updateUser(req.params.id, req.body);
         const return_data = {
             status: 200,
             message: "Successfully updated.",
@@ -57,9 +58,30 @@ const listUser = async (req, res, next) => {
     }
 }
 
+const listUserPagination = async (req, res, next) => {
+    try {
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 10;
+
+        const users = await UserHelper.listUserPagination(page, limit);
+        const totalUsers = await User.countDocuments();
+        const return_data = {
+            status: 200,
+            message: "Successfully fetched.",
+            data: users,
+            total: totalUsers,
+            totalPages: Math.ceil(totalUsers / limit), 
+            currentPage: page
+          };
+        res.status(200).json(return_data);
+    } catch (error) {
+        next(error);
+    }
+}
+
 const deleteUser = async (req, res, next) => {
     try {
-        const data = await UserHelper.deleteUser(req.body._id);
+        const data = await UserHelper.deleteUser(req.params.id);
         const return_data = {
             status: 200,
             message: "Successfully deleted.",
@@ -97,9 +119,10 @@ const loginUser = (req, res, next) => {
 
 Router.post('/create', createUser);
 Router.get('/edit/:id', editUser);
-Router.post('/update', updateUser);
+Router.put('/update/:id', updateUser);
 Router.get('/list', listUser);
-Router.post('/delete', deleteUser);
+Router.get('/delete/:id', deleteUser);
+Router.get('/list-pagination', listUserPagination);
 Router.post('/register', registerUser);
 Router.post('/login', loginUser);
 

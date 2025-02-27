@@ -1,20 +1,20 @@
 const express = require('express');
 const Router = express.Router();
-const BrandHelper = require('./brand.service');
-const Brand = require('./brand.model');
+const FaqHelper = require('./faq.service');
+const Faq = require('./faq.model');
 
-const createBrand = async (req, res, next) => {
+const createFaq = async (req, res, next) => {
     try {
-        const data = await BrandHelper.createBrand(req.body);
+        const data = await FaqHelper.createFaq(req.body);
         res.status(200).json(data);
     } catch (error) {
         next(error);
     }
 }
 
-const editBrand = async (req, res, next) => {
+const editFaq = async (req, res, next) => {
     try {
-        const data = await BrandHelper.editBrand(req.params.id);
+        const data = await FaqHelper.editFaq(req.params.id);
         const return_data = {
             status: 200,
             message: "Successfully fetched.",
@@ -26,9 +26,9 @@ const editBrand = async (req, res, next) => {
     }
 }
 
-const updateBrand = async (req, res, next) => {
+const updateFaq = async (req, res, next) => {
     try {
-        const data = await BrandHelper.updateBrand(req.params.id, req.body);
+        const data = await FaqHelper.updateFaq(req.params.id, req.body);
         const return_data = {
             status: 200,
             message: "Successfully updated.",
@@ -41,9 +41,9 @@ const updateBrand = async (req, res, next) => {
 }
 
 
-const listBrand = async (req, res, next) => {
+const listFaq = async (req, res, next) => {
     try {
-        const data = await BrandHelper.listBrand();
+        const data = await FaqHelper.listFaq();
         res.status(200).json(data);
     } catch (error) {
         next(error);
@@ -51,9 +51,9 @@ const listBrand = async (req, res, next) => {
 }
 
 
-const deleteBrand = async (req, res, next) => {
+const deleteFaq = async (req, res, next) => {
     try {
-        const data = await BrandHelper.deleteBrand(req.params.id);
+        const data = await FaqHelper.deleteFaq(req.params.id);
         const return_data = {
             status: 200,
             message: "Successfully deleted.",
@@ -65,19 +65,19 @@ const deleteBrand = async (req, res, next) => {
     }
 }
 
-const listBrandPagination = async (req, res, next) => {
+const listFaqPagination = async (req, res, next) => {
     try {
         const page = parseInt(req.query.page) || 1;
         const limit = parseInt(req.query.limit) || 10;
 
-        const brands = await BrandHelper.listBrandPagination(page, limit);
-        const totalBrands = await Brand.countDocuments();
+        const faqs = await FaqHelper.listFaqPagination(page, limit);
+        const totalFaqs = await Faq.countDocuments();
         const return_data = {
             status: 200,
             message: "Successfully fetched.",
-            data: brands,
-            total: totalBrands,
-            totalPages: Math.ceil(totalBrands / limit), 
+            data: faqs,
+            total: totalFaqs,
+            totalPages: Math.ceil(totalFaqs / limit), 
             currentPage: page
           };
         res.status(200).json(return_data);
@@ -87,11 +87,11 @@ const listBrandPagination = async (req, res, next) => {
 }
 
 
-Router.post('/create', createBrand);
-Router.get('/edit/:id', editBrand);
-Router.put('/update/:id', updateBrand);
-Router.get('/list', listBrand);
-Router.get('/delete/:id', deleteBrand);
-Router.get('/list-pagination', listBrandPagination);
+Router.post('/create', createFaq);
+Router.get('/edit/:id', editFaq);
+Router.put('/update/:id', updateFaq);
+Router.get('/list', listFaq);
+Router.get('/delete/:id', deleteFaq);
+Router.get('/list-pagination', listFaqPagination);
 
 module.exports = Router;
