@@ -23,9 +23,9 @@ const updateAbout = async (updateId, updateAbout) => {
             { _id: updateId },
             { 
                 $set: { 
-                    sv_name: updateAbout.sv_name, 
-                    sv_desc: updateAbout.sv_desc, 
-                    sv_status: updateAbout.sv_status 
+                    ab_name: updateAbout.ab_name, 
+                    ab_desc: updateAbout.ab_desc, 
+                    ab_status: updateAbout.ab_status 
                 }
             },
             { new: false, runValidators: true } 

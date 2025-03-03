@@ -1,6 +1,6 @@
 const express = require('express');
 const Router = express.Router();
-const AboutHelper = require('./about.about');
+const AboutHelper = require('./about.service');
 const About = require('./about.model');
 
 const createAbout = async (req, res, next) => {

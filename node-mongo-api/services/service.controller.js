@@ -2,13 +2,38 @@ const express = require('express');
 const Router = express.Router();
 const ServiceHelper = require('./service.service');
 const Service = require('./service.model');
+const multer = require('multer');
+const path = require('path');
+
+// Set up storage for image upload
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, './uploads/');
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname));
+    },
+});
+
+const upload = multer({ storage: storage });
 
 const createService = async (req, res, next) => {
+
+    const { sv_name, sv_desc } = req.body;
+    const sv_image = req.file ? req.file.path : null;
+
+    const serviceData = {
+        sv_name,
+        sv_desc,
+        sv_image
+    };
+
     try {
-        const data = await ServiceHelper.createService(req.body);
+        const data = await ServiceHelper.createService(serviceData);
         res.status(200).json(data);
     } catch (error) {
-        next(error);
+        /*next(error);*/
+        res.status(400).json({ error: err.message });
     }
 }
 
@@ -87,9 +112,9 @@ const listServicePagination = async (req, res, next) => {
 }
 
 
-Router.post('/create', createService);
+Router.post('/create', upload.single('sv_image'), createService);
 Router.get('/edit/:id', editService);
-Router.put('/update/:id', updateService);
+Router.put('/update/:id', upload.single('sv_image'), updateService);
 Router.get('/list', listService);
 Router.get('/delete/:id', deleteService);
 Router.get('/list-pagination', listServicePagination);

@@ -15,11 +15,13 @@ const productEnquiryRouter = require('./product-enquiries/product-enquiry.contro
 const faqRouter = require('./faqs/faq.controller');
 const serviceRouter = require('./services/service.controller');
 const aboutRouter = require('./about/about.controller');
+const path = require('path');
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use(cors({
   origin:  '*', // allow to server to accept request from different origin
