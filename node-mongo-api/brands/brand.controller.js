@@ -44,7 +44,13 @@ const updateBrand = async (req, res, next) => {
 const listBrand = async (req, res, next) => {
     try {
         const data = await BrandHelper.listBrand();
-        res.status(200).json(data);
+        const return_data = {
+            status: 200,
+            message: "Successfully fetched.",
+            data: data,
+        };
+        res.status(200).json(return_data);
+        //const data = await BrandHelper.listBrand();
     } catch (error) {
         next(error);
     }

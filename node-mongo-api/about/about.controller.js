@@ -2,13 +2,39 @@ const express = require('express');
 const Router = express.Router();
 const AboutHelper = require('./about.service');
 const About = require('./about.model');
+const multer = require('multer');
+const path = require('path');
+const protect = require('../middleware/authMiddleware');
+
+// Set up storage for image upload
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, './uploads/');
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname));
+    },
+});
+
+const upload = multer({ storage: storage });
 
 const createAbout = async (req, res, next) => {
+
+    const { ab_name, ab_desc } = req.body;
+    const ab_image = req.file ? req.file.path : null;
+
+    const aboutData = {
+        ab_name,
+        ab_desc,
+        ab_image
+    };
+
     try {
-        const data = await AboutHelper.createAbout(req.body);
+        const data = await AboutHelper.createAbout(aboutData);
         res.status(200).json(data);
     } catch (error) {
-        next(error);
+        /*next(error);*/
+        res.status(400).json({ error: err.message });
     }
 }
 
@@ -28,7 +54,15 @@ const editAbout = async (req, res, next) => {
 
 const updateAbout = async (req, res, next) => {
     try {
-        const data = await AboutHelper.updateAbout(req.params.id, req.body);
+        const { ab_name, ab_desc } = req.body;
+        const ab_image = req.file ? req.file.path : null;
+        const aboutData = {
+            ab_name,
+            ab_desc,
+            ab_image
+        };
+
+        const data = await AboutHelper.updateAbout(req.params.id, aboutData);
         const return_data = {
             status: 200,
             message: "Successfully updated.",
@@ -87,9 +121,9 @@ const listAboutPagination = async (req, res, next) => {
 }
 
 
-Router.post('/create', createAbout);
-Router.get('/edit/:id', editAbout);
-Router.put('/update/:id', updateAbout);
+Router.post('/create', protect, upload.single('ab_image'), createAbout);
+Router.get('/edit/:id', protect, editAbout);
+Router.put('/update/:id', upload.single('ab_image'), updateAbout);
 Router.get('/list', listAbout);
 Router.get('/delete/:id', deleteAbout);
 Router.get('/list-pagination', listAboutPagination);

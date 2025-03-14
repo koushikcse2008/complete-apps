@@ -53,7 +53,15 @@ const editService = async (req, res, next) => {
 
 const updateService = async (req, res, next) => {
     try {
-        const data = await ServiceHelper.updateService(req.params.id, req.body);
+        const { sv_name, sv_desc } = req.body;
+        const sv_image = req.file ? req.file.path : null;
+        const serviceData = {
+            sv_name,
+            sv_desc,
+            sv_image
+        };
+
+        const data = await ServiceHelper.updateService(req.params.id, serviceData);
         const return_data = {
             status: 200,
             message: "Successfully updated.",

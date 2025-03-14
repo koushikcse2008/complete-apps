@@ -21,7 +21,7 @@ const product = new Schema({
         required: true
     },
     prod_inventory: {
-        type: String,
+        type: Number,
         required: true
     },
     prod_price: {

@@ -25,6 +25,7 @@ const updateService = async (updateId, updateService) => {
                 $set: { 
                     sv_name: updateService.sv_name, 
                     sv_desc: updateService.sv_desc, 
+                    sv_image: updateService.sv_image,
                     sv_status: updateService.sv_status 
                 }
             },

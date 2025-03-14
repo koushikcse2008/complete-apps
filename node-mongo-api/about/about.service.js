@@ -25,6 +25,7 @@ const updateAbout = async (updateId, updateAbout) => {
                 $set: { 
                     ab_name: updateAbout.ab_name, 
                     ab_desc: updateAbout.ab_desc, 
+                    ab_image: updateAbout.ab_image,
                     ab_status: updateAbout.ab_status 
                 }
             },
@@ -57,7 +58,7 @@ const deleteAbout = async (delId) => {
     try {
             const deletedAbout = await About.findByIdAndDelete(delId);
             if (!deletedAbout) {
-                throw new Error('About not found');
+                throw new Error('Category not found');
             }
             return deletedAbout;
         } catch (error) {

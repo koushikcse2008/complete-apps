@@ -1,4 +1,7 @@
 const User = require('./user.model');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+const _ = require('lodash');
 
 const createUser = async (newUser) => {
     try {
@@ -81,7 +84,8 @@ try {
   const user = await User.findOne({ email: userData.email });
   if(user && user._id) {
     
-    const matchPassword = bcrypt.compareSync(userData.password, user.password);
+    //const matchPassword = bcrypt.compareSync(userData.password, user.password);
+    const matchPassword = bcrypt.compare(userData.password, user.password);
     if(matchPassword) {
 
      const token = generateJwtToken(user._id, user);
@@ -94,9 +98,7 @@ try {
   } else {
     throw "Email not exist";
   }
-
-  //newUser.password = generatePasswordHash(userData.password);
-  //return await new User(newUser).save();           
+        
 } catch (error) {
   throw error;
 }
@@ -111,13 +113,11 @@ const generatePasswordHash = (password) => {
 const generateJwtToken = async (userId, user) => {
     let token = jwt.sign(
       {
-        id: userId,
         _id: userId,
-        fname: _.get(user, "fname", ""),
-        lname: _.get(user, "lname", ""),
         email: _.get(user, "email", "")
       },
-      "f7c2e2bba6865d3d4faec384c71c93cf00b9e32c0b6252adc6221c971a66d924"
+      process.env.JWT_SECRET,
+      { expiresIn: process.env.JWT_EXPIRE }
     );
     return {
       token,

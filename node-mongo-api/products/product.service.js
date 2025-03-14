@@ -10,7 +10,7 @@ const createProduct = async (newProduct) => {
 
 const editProduct = async (productId) => {
     try {
-        return await new findById(productId);
+        return await Product.findById(productId);
     } catch(error) {
         throw error;
     }
@@ -93,9 +93,70 @@ const listProduct = async () => {
     }
 }
 
+const listProductPagination = async (page, limit) => {
+  try {
+      //return await Category.find().skip((page - 1) * limit).limit(limit);
+      return await Product.aggregate([
+        {
+          $lookup: {
+            from: 'categories',  
+            localField: 'cat_id', 
+            foreignField: '_id',
+            as: 'category'      
+          }
+        },
+        {
+            $unwind: {
+              path: '$category',
+              preserveNullAndEmptyArrays: true 
+            }
+          },
+        {
+          $lookup: {
+            from: 'brands',      
+            localField: 'brand_id', 
+            foreignField: '_id',   
+            as: 'brand'           
+          }
+        }, 
+        {
+          $unwind: {
+            path: '$brand',
+            preserveNullAndEmptyArrays: true 
+          }
+        },
+        {
+          $project: {
+            _id: 1,
+            prod_name: 1,
+            prod_slug: 1,
+            prod_price: 1,
+            prod_inventory: 1,
+            prod_short_desc: 1,
+            prod_desc: 1,
+            prod_status: 1,
+            //category: '$category',
+            //brand: '$brand',
+            category: '$category.cat_name',
+            brand: '$brand.brand_name',
+            createdAt: 1,
+          }
+        }
+      ]).skip((page - 1) * limit).limit(limit);
+
+  } catch(error) {
+      throw error;
+  }
+}
+
 const deleteProduct = async (delId) => {
     try {
-        return await new Product.findByIdAndDelete(delId);
+        //return await new Product.findByIdAndDelete(delId);
+        const deletedProd = await Product.findByIdAndDelete(delId);
+        if (!deletedProd) {
+            throw new Error('Product not found');
+        }
+        return deletedProd;
     } catch(error) {
         throw error;
     }
@@ -106,7 +167,8 @@ module.exports = {
     editProduct,
     updateProduct,
     listProduct,
-    deleteProduct
+    deleteProduct,
+    listProductPagination
 };
 
 // {
