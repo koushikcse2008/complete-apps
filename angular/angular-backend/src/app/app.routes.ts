@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { CommonLayoutComponent } from './layouts/common-layout/common-layout.component';
 import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 //import { AboutComponent } from './pages/about/about.component';
 import { OrderComponent } from './pages/order/order.component';
@@ -47,6 +48,10 @@ export const routes: Routes = [
     {
         path: '',
         component: LoginComponent
+    },
+    {
+        path: 'register',
+        component: RegisterComponent
     },
     {
         path: 'forgot-password',
