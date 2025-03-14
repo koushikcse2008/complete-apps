@@ -2,7 +2,6 @@ const express = require('express');
 const Router = express.Router();
 const FaqHelper = require('./faq.service');
 const Faq = require('./faq.model');
-const protect = require('../middleware/authMiddleware');
 
 const createFaq = async (req, res, next) => {
     try {
@@ -88,11 +87,11 @@ const listFaqPagination = async (req, res, next) => {
 }
 
 
-Router.post('/create', protect, createFaq);
-Router.get('/edit/:id', protect, editFaq);
-Router.put('/update/:id', protect, updateFaq);
-Router.get('/list', protect, listFaq);
-Router.get('/delete/:id', protect, deleteFaq);
-Router.get('/list-pagination', protect, listFaqPagination);
+Router.post('/create', createFaq);
+Router.get('/edit/:id', editFaq);
+Router.put('/update/:id', updateFaq);
+Router.get('/list', listFaq);
+Router.get('/delete/:id', deleteFaq);
+Router.get('/list-pagination', listFaqPagination);
 
 module.exports = Router;

@@ -24,6 +24,8 @@ const faqRouter = require('./faqs/faq.controller');
 const serviceRouter = require('./services/service.controller');
 const aboutRouter = require('./about/about.controller');
 
+const protect = require('./middleware/authMiddleware');
+
 
 const app = express();
 
@@ -94,18 +96,18 @@ logLevel.info("This log will be saved to console-log-level.log");
 
 
 //Routes
-app.use('/contact', contactRouter);
-app.use('/page-content', pageContentRouter);
-app.use('/brand', brandRouter);
-app.use('/category', categoryRouter);
+app.use('/contact', protect, contactRouter);
+app.use('/page-content', protect, pageContentRouter);
+app.use('/brand', protect, brandRouter);
+app.use('/category', protect, categoryRouter);
 app.use('/user', userRouter);
-app.use('/order', orderRouter);
-app.use('/order-details', orderDetailsRouter);
-app.use('/product', productRouter);
-app.use('/product-enquiry', productEnquiryRouter);
-app.use('/faq', faqRouter);
-app.use('/service', serviceRouter);
-app.use('/about', aboutRouter);
+app.use('/order', protect, orderRouter);
+app.use('/order-details', protect, orderDetailsRouter);
+app.use('/product', protect, productRouter);
+app.use('/product-enquiry', protect, productEnquiryRouter);
+app.use('/faq', protect, faqRouter);
+app.use('/service', protect, serviceRouter);
+app.use('/about', protect, aboutRouter);
 
 
 app.listen(process.env.SERVER_PORT, () => {
