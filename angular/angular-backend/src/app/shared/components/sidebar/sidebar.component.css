@@ -1,14 +1,15 @@
 ul.custom-sidebar {
 	border-radius: 10px !important;
+	padding-bottom: 20px;
 }
 
 ul.custom-sidebar li {
-	background-color: green;
+	background-color: #fff !important;
 	
 }
 
 ul.custom-sidebar li a {
-	color:  #fff!important;
+	color:  #000!important;
 	text-decoration: none;
     cursor: pointer;
 }
@@ -16,6 +17,8 @@ ul.custom-sidebar li a {
 ul.custom-sidebar li a.active {
 	font-weight: bold;
 	border-bottom: 2px solid #fff;
+	color: #007BFF !important;
+	border-bottom: 2px dashed #007BFF;
 }
 
 .action-link { 

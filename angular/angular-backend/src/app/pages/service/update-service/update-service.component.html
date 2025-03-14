@@ -1,0 +1,28 @@
+<div class="form-group col-lg-8">
+    <h3>Update Service</h3>
+    <hr />
+    <form (ngSubmit)="onUpload()" #serviceForm="ngForm">
+        <div class="mb-3">
+            <label class="form-label">Service Name:</label>
+            <input type="text" class="form-control mb-3" [(ngModel)]="service.sv_name" name="sv_name" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Service Description:</label>
+            <textarea class="form-control mb-3" [(ngModel)]="service.sv_desc" name="sv_desc" rows="4"
+                style="resize: none;"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Service Image:</label>
+            <input type="file" class="form-control mb-3" (change)="onFileSelected($event)" name="sv_image"
+                placeholder="Service Image" />
+                <img *ngIf="serlectedImage" [src]="dataUrl + serlectedImage" style="height: 100px;" />
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary fw-bold ps-4 pe-4">Update Service</button>
+            <a class='cancel-data' href="/admin/service/list">Cancel</a>
+        </div>
+    </form>
+</div>

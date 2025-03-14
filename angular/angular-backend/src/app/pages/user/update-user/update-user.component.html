@@ -1,0 +1,25 @@
+<div class="form-group col-lg-8">
+    <form (ngSubmit)="updateUser()">
+    <h3>Update User</h3>
+    <hr />
+    <div class="row">
+        <div class="col-lg-6">
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.user_type" name="user_type" placeholder="User Type" />
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.user_name" name="user_name" placeholder="User Name" />
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.email" name="email" placeholder="User Email" />
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.password" name="password" placeholder="User Password" />    
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.phone" name="phone" placeholder="User Phone" />    
+        </div>
+        <div class="col-lg-6">
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.country" name="country" placeholder="User Country" />
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.state" name="state" placeholder="User State" />
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.city" name="city" placeholder="User City" />
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.zipcode" name="zipcode" placeholder="User Zipcode" />
+        </div>
+    </div>
+    <hr />
+
+    <button type="submit" class="btn btn-primary fw-bold ps-4 pe-4">Update User</button>
+    <a class='cancel-data' href="/admin/user/list">Cancel</a>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+<div *ngIf="errorData.type === 'warning'" class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Warning!</strong> {{ errorData.message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div *ngIf="errorData.type === 'error'" class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Error!</strong> {{ errorData.message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div *ngIf="errorData.type === 'success'" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> {{ errorData.message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>

@@ -1,0 +1,22 @@
+<div class="form-group col-lg-8">
+    <h3>Add User</h3>
+    <hr />
+    <div class="row">
+        <div class="col-lg-6">
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.user_type" placeholder="User Type" />
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.user_name" placeholder="User Name" />
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.email" placeholder="User Email" />
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.password" placeholder="User Password" />    
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.phone" placeholder="User Phone" />    
+        </div>
+        <div class="col-lg-6">
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.country" placeholder="User Country" />
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.state" placeholder="User State" />
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.city" placeholder="User City" />
+            <input type="text" class="form-control mb-3" [(ngModel)]="user.zipcode" placeholder="User Zipcode" />
+        </div>
+    </div>
+    <hr />
+    <button (click)="addUser()" class="btn btn-primary fw-bold ps-4 pe-4">Add User</button>
+    <a class='cancel-data' href="/admin/user/list">Cancel</a>
+</div>

@@ -1,0 +1,49 @@
+<div class="form-group col-lg-8">
+    <h3>Add Product</h3>
+    <hr />
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="mb-3">
+                <label class="form-label">Category Name:</label>
+                <input type="text" class="form-control mb-3" [(ngModel)]="product.cat_id" name="cat_id" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Brand Name:</label>
+                <input type="text" class="form-control mb-3" [(ngModel)]="product.brand_id" name="brand_id" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Product Name:</label>
+                <input type="text" class="form-control mb-3" [(ngModel)]="product.prod_name" name="prod_name" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Product Slug:</label>
+                <input type="text" class="form-control mb-3" [(ngModel)]="product.prod_slug" name="prod_slug" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Product Inventory:</label>
+                <input type="text" class="form-control mb-3" [(ngModel)]="product.prod_inventory" name="prod_inventory" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Price:</label>
+                <input type="text" class="form-control mb-3 size-small" [(ngModel)]="product.prod_price" name="prod_price" />
+            </div>
+        </div>
+        <div class="col-lg-6">            
+            <div class="mb-3">
+                <label class="form-label">Short description:</label>
+                <textarea class="form-control mb-3" [(ngModel)]="product.prod_short_desc" name="prod_short_desc" rows="6"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Product description:</label>
+                <textarea class="form-control mb-3" [(ngModel)]="product.prod_desc" name="prod_desc" rows="6"></textarea>
+            </div>
+        </div>
+    </div>
+    
+    <hr class="mb-4 border-danger" />
+    
+    <div class="mb-3">
+        <button (click)="addProduct()" class="btn btn-primary fw-bold ps-4 pe-4">Add Product</button>
+        <a class='cancel-data' href="/admin/product/list">Cancel</a>
+    </div>
+</div>

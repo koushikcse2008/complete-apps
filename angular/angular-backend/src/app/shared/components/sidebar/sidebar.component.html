@@ -1,38 +1,41 @@
-<ul class="list-group mt-3 custom-sidebar">
+<ul class="list-group mt-3 pt-2 custom-sidebar">
     <li class="list-group-item" aria-current="true">
       <a routerLink="/admin/dashboard" routerLinkActive='active'>Dashboard</a>
     </li>
     <li class="list-group-item" aria-current="true">
-      <a routerLink="/admin/about" routerLinkActive='active'>Manage About</a>
+      <a routerLink="/admin/about/list" routerLinkActive='active'>Manage About</a>
     </li>
     <li class="list-group-item" aria-current="true">
-      <a routerLink="/admin/contact" routerLinkActive='active'>Manage Contact</a>
+      <a routerLink="/admin/contact/list" routerLinkActive='active'>Manage Contact</a>
     </li>
     <li class="list-group-item" aria-current="true">
-      <a routerLink="/admin/faq" routerLinkActive='active'>Manage FAQ</a>
+      <a routerLink="/admin/faq/list" routerLinkActive='active'>Manage FAQ</a>
     </li>
-    <li class="list-group-item" aria-current="true">
+    <!-- <li class="list-group-item" aria-current="true">
       <a routerLink="/admin/portfolio" routerLinkActive='active'>Manage Portfolio</a>
-    </li>
+    </li> -->
     <li class="list-group-item" aria-current="true">
-      <a routerLink="/admin/service" routerLinkActive='active'>Manage Service</a>
+      <a routerLink="/admin/service/list" routerLinkActive='active'>Manage Service</a>
     </li>          
     <li class="list-group-item" aria-current="true">
-      <a routerLink="/admin/brand" routerLinkActive='active'>Manage Brand</a>
+      <a routerLink="/admin/brand/list" routerLinkActive='active'>Manage Brand</a>
     </li>
     <li class="list-group-item" aria-current="true">
-      <a routerLink="/admin/category" routerLinkActive='active'>Manage Category</a>
+      <a routerLink="/admin/category/list" routerLinkActive='active'>Manage Category</a>
     </li>
     <li class="list-group-item" aria-current="true">
-      <a routerLink="/admin/product" routerLinkActive='active'>Manage Product</a>
+      <a routerLink="/admin/product/list" routerLinkActive='active'>Manage Product</a>
     </li>
-    <li class="list-group-item" aria-current="true">
+    <!-- <li class="list-group-item" aria-current="true">
       <a routerLink="/admin/order" routerLinkActive='active'>Manage Order</a>
     </li>
     <li class="list-group-item" aria-current="true">
       <a routerLink="/admin/product-enquiry" routerLinkActive='active'>Manage Product Enquiry</a>
+    </li> -->
+    <li class="list-group-item" aria-current="true">
+      <a routerLink="/admin/user/list" routerLinkActive='active'>Manage User</a>
     </li>
     <li class="list-group-item" aria-current="true">
-      <a routerLink="/admin/user" routerLinkActive='active'>Manage User</a>
+      <a (click)="logout()">Logout</a>
     </li>
   </ul>

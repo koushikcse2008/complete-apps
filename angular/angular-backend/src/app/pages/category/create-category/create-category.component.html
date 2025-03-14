@@ -1,0 +1,16 @@
+<div class="form-group col-lg-4">
+    <h3>Add Category</h3>
+    <hr />
+    <div class="mb-3">
+        <label class="form-label">Category Name:</label>
+        <input type="text" class="form-control mb-3" [(ngModel)]="category.cat_name" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Category Description:</label>
+        <textarea class="form-control mb-3" [(ngModel)]="category.cat_desc" rows="6" style="resize: none;"></textarea>
+    </div>
+    <div class="mb-3">
+        <button (click)="addCategory()" class="btn btn-primary fw-bold ps-4 pe-4">Add Category</button>
+        <a class='cancel-data' href="/admin/category/list">Cancel</a>
+    </div>
+</div>

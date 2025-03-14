@@ -1,0 +1,29 @@
+<div class="form-group col-lg-6">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h3>Create Faq</h3>
+        <hr class="header-hr" />
+        <app-alert *ngIf="showAlert" [errorData]="alertDetails" (close)="closeAlert()" />
+        <div class="mb-3">
+            <label class="form-label">Faq Title:</label>
+            <input type="text" class="form-control mb-3" formControlName="faq_question" name="faq_question" />
+            <div *ngIf="faq_question?.touched && faq_question?.invalid" class="text-danger">
+                <small *ngIf="faq_question?.errors?.['required']">Faq Question is required.</small>
+                <small *ngIf="faq_question?.errors?.['minlength']">Faq Question must be at least 3 characters long.</small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Faq Description:</label>
+            <textarea class="form-control mb-3" formControlName="faq_answer" name="faq_answer" rows="6"></textarea>
+            <div *ngIf="faq_answer?.touched && faq_answer?.invalid" class="text-danger">
+                <small *ngIf="faq_answer?.errors?.['required']">Faq Answer is required.</small>
+                <small *ngIf="faq_answer?.errors?.['minlength']">Faq Answer must be at least 3 characters long.</small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary fw-bold ps-4 pe-4" [disabled]="form.invalid">Save Faq</button>
+            <a class='cancel-data' href="/admin/faq/list">Back</a>
+        </div>
+    </form>
+</div>
+  
+
