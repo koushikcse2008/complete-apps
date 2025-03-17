@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AboutService } from '../about.service';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router, RouterLink } from '@angular/router';
 import AboutModel from '../about.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { environment } from '../../../environments/environment';
@@ -13,7 +13,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-create-service',
   standalone: true,
-  imports: [FormsModule, CommonModule, HttpClientModule],
+  imports: [FormsModule, CommonModule, HttpClientModule, RouterLink],
   templateUrl: './create-about.component.html',
   styleUrl: './create-about.component.css'
 })
@@ -30,6 +30,9 @@ export class CreateAboutComponent {
   //showAdd: boolean = false;
 
   private apiUrl = `${environment.apiBaseUrl}/about/create`;
+
+  token = localStorage.getItem('authToken');    
+  headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
 
   constructor(
     private router: Router, 
@@ -59,7 +62,7 @@ export class CreateAboutComponent {
     formData.append('ab_desc', this.about.ab_desc);
     formData.append('ab_image', this.about.ab_image, this.about.ab_image.name);
 
-    this.http.post(this.apiUrl, formData).subscribe(
+    this.http.post(this.apiUrl, formData, { headers: this.headers}).subscribe(
       (response) => {
         this.router.navigate(['admin/about/list']);
       },

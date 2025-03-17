@@ -44,7 +44,12 @@ const updateFaq = async (req, res, next) => {
 const listFaq = async (req, res, next) => {
     try {
         const data = await FaqHelper.listFaq();
-        res.status(200).json(data);
+        const return_data = {
+            status: 200,
+            message: "Successfully updated.",
+            data: data,
+        };
+        res.status(200).json(return_data);
     } catch (error) {
         next(error);
     }

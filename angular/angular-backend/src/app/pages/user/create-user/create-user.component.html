@@ -2,21 +2,45 @@
     <h3>Add User</h3>
     <hr />
     <div class="row">
-        <div class="col-lg-6">
-            <input type="text" class="form-control mb-3" [(ngModel)]="user.user_type" placeholder="User Type" />
-            <input type="text" class="form-control mb-3" [(ngModel)]="user.user_name" placeholder="User Name" />
-            <input type="text" class="form-control mb-3" [(ngModel)]="user.email" placeholder="User Email" />
-            <input type="text" class="form-control mb-3" [(ngModel)]="user.password" placeholder="User Password" />    
-            <input type="text" class="form-control mb-3" [(ngModel)]="user.phone" placeholder="User Phone" />    
+        <app-alert *ngIf="showAlert" [errorData]="alertDetails" (close)="closeAlert()" />
+        <div class="col-lg-6">            
+            <div class="mb-3">
+                <label class="form-label">User Name:</label>
+                <input type="text" class="form-control mb-3" [(ngModel)]="user.user_name" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">User Email:</label>
+                <input type="text" class="form-control mb-3" [(ngModel)]="user.email" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">User Password:</label>
+                <input type="text" class="form-control mb-3" [(ngModel)]="user.password" />    
+            </div>
+            <div class="mb-3">
+                <label class="form-label">User Phone:</label>
+                <input type="text" class="form-control mb-3" [(ngModel)]="user.phone" />    
+            </div>
         </div>
         <div class="col-lg-6">
-            <input type="text" class="form-control mb-3" [(ngModel)]="user.country" placeholder="User Country" />
-            <input type="text" class="form-control mb-3" [(ngModel)]="user.state" placeholder="User State" />
-            <input type="text" class="form-control mb-3" [(ngModel)]="user.city" placeholder="User City" />
-            <input type="text" class="form-control mb-3" [(ngModel)]="user.zipcode" placeholder="User Zipcode" />
+            <div class="mb-3">
+                <label class="form-label">User Country:</label>
+                <input type="text" class="form-control mb-3" [(ngModel)]="user.country" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">User State:</label>
+                <input type="text" class="form-control mb-3" [(ngModel)]="user.state" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">User City:</label>
+                <input type="text" class="form-control mb-3" [(ngModel)]="user.city" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">User Zipcode:</label>
+                <input type="text" class="form-control mb-3" [(ngModel)]="user.zipcode" />
+            </div>
         </div>
     </div>
     <hr />
     <button (click)="addUser()" class="btn btn-primary fw-bold ps-4 pe-4">Add User</button>
-    <a class='cancel-data' href="/admin/user/list">Cancel</a>
+    <a class='cancel-data' routerLink="/admin/user/list">Cancel</a>
 </div>

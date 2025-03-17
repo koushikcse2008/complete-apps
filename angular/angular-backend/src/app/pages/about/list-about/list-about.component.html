@@ -1,5 +1,5 @@
 <h3>Manage About</h3>
-<a class='add-data' href="/admin/about/create">Create About</a>
+<a class='add-data' routerLink="/admin/about/create">Create About</a>
 <hr />
 <div *ngIf="isLoading">Loading abouts...</div>
 <table class="table table-striped mb-4" *ngIf="!isLoading">
@@ -8,13 +8,14 @@
         <th scope="col">Sl.</th>
         <th scope="col">Name</th>
         <th scope="col">Desc</th>
+        <th scope="col">Image</th>
         <th scope="col">Date</th>
         <th scope="col">Action</th>
     </tr>
     </thead>
     <tbody>
         
-    <tr><td *ngIf="abouts.length == 0" colspan="5" class="text-center">No data found.</td></tr>
+    <tr><td *ngIf="abouts.length == 0" colspan="6" class="text-center">No data found.</td></tr>
 
     <tr *ngFor="let about of abouts; let i = index">
         <th scope="row">{{ (currentPage - 1) * limit + i + 1 }}</th>
@@ -22,6 +23,7 @@
         <td>{{ about.ab_desc }}</td>
         <td> 
             <img *ngIf="about.ab_image" [src]="apiUrl + about.ab_image" style="height: 100px;" />
+            <p *ngIf="!about.ab_image">N/A</p>
         </td>
         <td>{{ about.createdAt | date: 'yyyy-MM-dd' }}</td>
         <td>

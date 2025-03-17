@@ -114,11 +114,12 @@ const generateJwtToken = async (userId, user) => {
     let token = jwt.sign(
       {
         _id: userId,
-        email: _.get(user, "email", "")
+        email: _.get(user.email, "email", "")
       },
       process.env.JWT_SECRET,
       { expiresIn: process.env.JWT_EXPIRE }
     );
+
     return {
       token,
     };

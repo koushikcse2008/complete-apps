@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CategoryService } from '../category.service';
 import { HttpClientModule } from '@angular/common/http';
-import { Router, RouterModule } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import CategoryModel from "../category.model";
 
 import { Title } from '@angular/platform-browser';
@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-category',
   standalone: true,
-  imports: [RouterModule, FormsModule, CommonModule, HttpClientModule],
+  imports: [FormsModule, CommonModule, HttpClientModule, RouterLink],
   templateUrl: './list-category.component.html',
   styleUrl: './list-category.component.css'
 })

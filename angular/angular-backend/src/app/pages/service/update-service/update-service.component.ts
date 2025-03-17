@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ServiceService } from '../service.service';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import ServiceModel from "../service.model";
 import { FormBuilder } from '@angular/forms';
@@ -38,6 +38,8 @@ export class UpdateServiceComponent implements OnInit{
   ) {  }
 
   public apiUrl = this.dataUrl+`service`;
+  token = localStorage.getItem('authToken');    
+  headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
 
   onFileSelected(event: any): void {
     this.service.sv_image = event.target.files[0];
@@ -72,7 +74,7 @@ export class UpdateServiceComponent implements OnInit{
     formData.append('sv_desc', this.service.sv_desc);
     formData.append('sv_image', this.service.sv_image, this.service.sv_image.name);
 
-    this.http.put(this.apiUrl+"/update/"+this.service._id, formData).subscribe(
+    this.http.put(this.apiUrl+"/update/"+this.service._id, formData, { headers: this.headers}).subscribe(
       (response) => {
         this.message = 'File uploaded successfully!';
         this.router.navigate(['admin/service/list']);

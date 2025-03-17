@@ -36,7 +36,7 @@ export class AboutService {
   }
 
   createAbout(about: AboutModel): Observable<AboutModel> {
-    return this.http.post<AboutModel>(`${this.apiUrl}/create`, about, { headers: this.headers });
+    return this.http.post<AboutModel>(`${this.apiUrl}/create`, { about, headers: this.headers });
   }
 
   editAbouts(id: string): Observable<AboutResponse> {
@@ -44,7 +44,7 @@ export class AboutService {
   }
 
   updateAbout(id: string, about: AboutModel): Observable<AboutModel> {
-    return this.http.put<AboutModel>(`${this.apiUrl}/update/${id}`, about, { headers: this.headers });
+    return this.http.put<AboutModel>(`${this.apiUrl}/update/${id}`, { about, headers: this.headers });
   }
 
   deleteAbout(id: string): Observable<any> {

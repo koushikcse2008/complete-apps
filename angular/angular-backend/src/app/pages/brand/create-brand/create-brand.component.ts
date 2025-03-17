@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BrandService } from '../brand.service';
 import { HttpClientModule } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import BrandModel from '../brand.model';
 
 import { Title } from '@angular/platform-browser';
@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-create-brand',
   standalone: true,
-  imports: [FormsModule, CommonModule, HttpClientModule],
+  imports: [FormsModule, CommonModule, HttpClientModule, RouterLink],
   templateUrl: './create-brand.component.html',
   styleUrl: './create-brand.component.css'
 })

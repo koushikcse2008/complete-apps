@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AboutService } from '../about.service';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import AboutModel from "../about.model";
 
@@ -27,6 +27,8 @@ export class UpdateAboutComponent implements OnInit{
   dataUrl = `${environment.apiBaseUrl}/`;
 
   public apiUrl = this.dataUrl+`about`;
+  token = localStorage.getItem('authToken');    
+  headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
 
   onFileSelected(event: any): void {
     this.about.ab_image = event.target.files[0];
@@ -69,7 +71,7 @@ export class UpdateAboutComponent implements OnInit{
     formData.append('ab_desc', this.about.ab_desc);
     formData.append('ab_image', this.about.ab_image, this.about.ab_image.name);
 
-    this.http.put(this.apiUrl+"/update/"+this.about._id, formData).subscribe(
+    this.http.put(this.apiUrl+"/update/"+this.about._id, formData, { headers: this.headers}).subscribe(
       (response) => {
         //this.message = 'File uploaded successfully!';
         this.router.navigate(['admin/about/list']);

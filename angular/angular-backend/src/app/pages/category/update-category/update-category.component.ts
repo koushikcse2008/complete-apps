@@ -1,17 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { CategoryService } from '../category.service';
 import { HttpClientModule } from '@angular/common/http';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import CategoryModel from "../category.model";
 
 import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-update-category',
-  imports: [CommonModule, RouterModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './update-category.component.html',
   styleUrl: './update-category.component.css'
 })

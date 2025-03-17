@@ -10,13 +10,15 @@ const protect = (req, res, next) => {
     req.headers.authorization &&
     req.headers.authorization.startsWith('Bearer')
   ) {
+
     try {
       token = req.headers.authorization.split(' ')[1];
 
       // Decode token and attach user to request object
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      req.user = decoded.id;
+      req.user = decoded._id;
       next();
+      
     } catch (error) {
       res.status(401).json({ message: 'Not authorized, token failed' });
     }

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 import ProductModel from '../product.model';
 import { ProductService } from '../product.service';
@@ -18,7 +18,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-create-product',
   standalone: true,
-  imports: [FormsModule, CommonModule, HttpClientModule],
+  imports: [FormsModule, CommonModule, HttpClientModule, RouterLink],
   templateUrl: './create-product.component.html',
   styleUrl: './create-product.component.css'
 })

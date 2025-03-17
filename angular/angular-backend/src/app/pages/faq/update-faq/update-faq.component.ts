@@ -18,6 +18,8 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './update-faq.component.html',
   styleUrl: './update-faq.component.css'
 })
+
+
 export class UpdateFaqComponent implements OnInit{
 
   constructor(

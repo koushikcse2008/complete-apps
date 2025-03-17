@@ -24,8 +24,7 @@ const Users = new Schema(
             required: true
         },
         phone: {
-            type: String,
-            required: false
+            type: String
         },
         addr: {
             type: String

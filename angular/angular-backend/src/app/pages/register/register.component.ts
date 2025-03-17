@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RegisterService } from './register.service';
 import { HttpClientModule } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import UserModel from '../register/register.model';
 import { ToastrService } from 'ngx-toastr';
 
@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-register',
-  imports: [FormsModule, CommonModule, HttpClientModule],
+  imports: [FormsModule, CommonModule, HttpClientModule, RouterLink],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
   standalone: true

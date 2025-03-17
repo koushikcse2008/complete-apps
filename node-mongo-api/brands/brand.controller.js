@@ -26,6 +26,7 @@ const editBrand = async (req, res, next) => {
     }
 }
 
+
 const updateBrand = async (req, res, next) => {
     try {
         const data = await BrandHelper.updateBrand(req.params.id, req.body);
@@ -91,7 +92,6 @@ const listBrandPagination = async (req, res, next) => {
         next(error);
     }
 }
-
 
 Router.post('/create', createBrand);
 Router.get('/edit/:id', editBrand);

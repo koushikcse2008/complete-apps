@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ServiceService } from '../service.service';
-import { HttpClientModule, HttpClient  } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router, RouterLink } from '@angular/router';
 import ServiceModel from '../service.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { environment } from '../../../environments/environment';
@@ -13,13 +13,15 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-create-service',
   standalone: true,
-  imports: [FormsModule, CommonModule, HttpClientModule],
+  imports: [FormsModule, CommonModule, HttpClientModule, RouterLink],
   templateUrl: './create-service.component.html',
   styleUrl: './create-service.component.css'
 })
 export class CreateServiceComponent {
 
   private apiUrl = `${environment.apiBaseUrl}/service/create`;
+  token = localStorage.getItem('authToken');    
+  headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
 
   selectedFile: File | null = null;
   message: string = '';
@@ -54,7 +56,7 @@ export class CreateServiceComponent {
     formData.append('sv_desc', this.service.sv_desc);
     formData.append('sv_image', this.service.sv_image, this.service.sv_image.name);
 
-    this.http.post(this.apiUrl, formData).subscribe(
+    this.http.post(this.apiUrl, formData, { headers: this.headers}).subscribe(
       (response) => {
         this.message = 'File uploaded successfully!';
         console.log(response);

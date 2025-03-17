@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FaqService } from '../faq.service';
 import { HttpClientModule } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 //import FaqModel from '../faq.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -15,7 +15,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-create-faq',
   standalone: true,
-  imports: [FormsModule, CommonModule, HttpClientModule, ReactiveFormsModule, AlertComponent],
+  imports: [FormsModule, CommonModule, HttpClientModule, ReactiveFormsModule, AlertComponent, RouterLink],
   templateUrl: './create-faq.component.html',
   styleUrl: './create-faq.component.css'
 })

@@ -47,10 +47,10 @@ export class ListContactComponent implements OnInit {
         this.totalPages = response.totalPages;
         this.currentPage = response.currentPage;
         this.isLoading = false;
-        console.log(this.totalContacts);
+        //console.log(this.totalContacts);
       },
       (error) => {
-        console.error('Error loading contacts:', error);
+        //console.error('Error loading contacts:', error);
         this.isLoading = false;
       }
     );

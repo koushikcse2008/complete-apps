@@ -49,10 +49,10 @@ export class ListAboutComponent implements OnInit {
         this.totalPages = response.totalPages;
         this.currentPage = response.currentPage;
         this.isLoading = false;
-        console.log(this.totalAbouts);
+        //console.log(this.totalAbouts);
       },
       (error) => {
-        console.error('Error loading abouts:', error);
+        //console.error('Error loading abouts:', error);
         this.isLoading = false;
       }
     );

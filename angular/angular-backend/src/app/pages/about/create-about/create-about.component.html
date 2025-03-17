@@ -3,12 +3,12 @@
     <hr />
     <form (ngSubmit)="onUpload()" #serviceForm="ngForm">
         <div class="mb-3">
-            <label class="form-label">Enter About Title</label>      
+            <label class="form-label">About Title</label>      
             <input type="text" class="form-control mb-3" [(ngModel)]="about.ab_name" name="ab_name" />
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Enter About Content</label>   
+            <label class="form-label">About Content</label>   
             <textarea class="form-control mb-3" [(ngModel)]="about.ab_desc" name="ab_desc" rows="6" ></textarea>
         </div>
 
@@ -19,7 +19,7 @@
         </div>
         <div class="mb-3">
             <button type="submit" class="btn btn-primary fw-bold ps-4 pe-4">Add About</button>
-            <a class='cancel-data' href="/admin/about/list">Cancel</a>
+            <a class='cancel-data' routerLink="/admin/about/list">Cancel</a>
         </div>
     </form>
 </div>

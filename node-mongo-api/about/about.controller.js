@@ -4,7 +4,6 @@ const AboutHelper = require('./about.service');
 const About = require('./about.model');
 const multer = require('multer');
 const path = require('path');
-const protect = require('../middleware/authMiddleware');
 
 // Set up storage for image upload
 const storage = multer.diskStorage({
@@ -31,10 +30,20 @@ const createAbout = async (req, res, next) => {
 
     try {
         const data = await AboutHelper.createAbout(aboutData);
-        res.status(200).json(data);
+        const return_data = {
+            status: 200,
+            message: "Successfully added.",
+            data: data,
+        };
+        res.status(200).json(return_data);
     } catch (error) {
         /*next(error);*/
-        res.status(400).json({ error: err.message });
+        const return_data = {
+            status: 400,
+            message: "Error.",
+            data: { error: err.message },
+        };
+        res.status(400).json(return_data);
     }
 }
 
@@ -78,26 +87,17 @@ const updateAbout = async (req, res, next) => {
 const listAbout = async (req, res, next) => {
     try {
         const data = await AboutHelper.listAbout();
-        res.status(200).json(data);
+        const return_data = {
+            status: 200,
+            message: "Successfully fetched.",
+            data: data,
+        };
+        res.status(200).json(return_data);
     } catch (error) {
         next(error);
     }
 }
 
-
-const deleteAbout = async (req, res, next) => {
-    try {
-        const data = await AboutHelper.deleteAbout(req.params.id);
-        const return_data = {
-            status: 200,
-            message: "Successfully deleted.",
-            data: data,
-        };
-        res.status(200).json(return_data);
-    } catch (error) {
-        next(error); 
-    }
-}
 
 const listAboutPagination = async (req, res, next) => {
     try {
@@ -121,8 +121,23 @@ const listAboutPagination = async (req, res, next) => {
 }
 
 
-Router.post('/create', protect, upload.single('ab_image'), createAbout);
-Router.get('/edit/:id', protect, editAbout);
+const deleteAbout = async (req, res, next) => {
+    try {
+        const data = await AboutHelper.deleteAbout(req.params.id);
+        const return_data = {
+            status: 200,
+            message: "Successfully deleted.",
+            data: data,
+        };
+        res.status(200).json(return_data);
+    } catch (error) {
+        next(error); 
+    }
+}
+
+
+Router.post('/create', upload.single('ab_image'), createAbout);
+Router.get('/edit/:id', editAbout);
 Router.put('/update/:id', upload.single('ab_image'), updateAbout);
 Router.get('/list', listAbout);
 Router.get('/delete/:id', deleteAbout);
