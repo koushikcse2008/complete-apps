@@ -4,9 +4,11 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import CommonLayout from '@/layouts/commonlayout';
 import Link from 'next/link';
+import { toast } from 'react-toastify';
 
 const AddCategory = () => {
   const [cat_name, setName] = useState('');
+  const [cat_desc, setDesc] = useState('');
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -18,14 +20,15 @@ const AddCategory = () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ cat_name }),
+      body: JSON.stringify({ cat_name, cat_desc }),
     });
 
     if (res.ok) {
-      router.push('/admin/category');
+      setName(''); setDesc('');
+      toast.success('Successfully added!');
+      //router.push('/admin/category');
     } else {
-      // Handle error (e.g., show an error message)
-      console.error('Error adding category');
+      toast.error('Error adding category!');
     }
   };
 
@@ -40,6 +43,8 @@ const AddCategory = () => {
             <form onSubmit={handleSubmit}>
                 <label for="formBrand" className="form-label">Name:</label>
                 <input type="text" className="form-control input-sm mb-3" value={cat_name} onChange={(e) => setName(e.target.value)} required />
+                <label for="formBrand" className="form-label">Description:</label>
+                <textarea className="form-control input-sm mb-3" value={cat_desc} onChange={(e) => setDesc(e.target.value)} rows={6} required></textarea>
                 <button type="submit" name='btnAdd' id='btnAdd' className='btn btn-primary'>Add Category</button>
             </form>
         </div>

@@ -3,6 +3,8 @@ import Header from '@/components/common/header';
 import Sidebar from '@/components/common/sidebar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/common-layout.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CommonLayout = ({ children }) => {
   return (
@@ -21,6 +23,18 @@ const CommonLayout = ({ children }) => {
         </div>
       </div>
       <Footer />
+      <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick={false}
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="colored"
+              />
     </>
   );
 };

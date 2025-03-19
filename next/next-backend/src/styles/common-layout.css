@@ -380,3 +380,5 @@ ul.custom-sidebar li a.active {
 .border {
 	border-radius: 10px !important;
 }
+
+textarea { resize: none; }
